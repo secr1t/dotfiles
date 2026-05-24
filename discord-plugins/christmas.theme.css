@@ -1,0 +1,145 @@
+/**
+ * @name system24 - Christmas Edition
+ * @description A TUI-style Discord theme inspired by cozy Christmas evenings — pine green, holly red & golden light.
+ * @author refact0r + adapted by Secrit
+ * @version 2.0.0-christmas
+ * @website https://github.com/refact0r/system24
+ */
+
+/* import base system24 */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    --font: 'DM Mono';
+    --code-font: 'DM Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(75deg, var(--accent-1), var(--accent-2), var(--accent-3));
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --small-user-panel: on;
+    --unrounding: on;
+
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+/* 🎄 True Christmas Palette — warm lights, pine greens, and red ribbons */
+:root {
+    --colors: on;
+
+    /* text */
+    --text-0: var(--bg-4);
+    --text-1: #fffaf2; /* candlelight white */
+    --text-2: #f8e0b0;
+    --text-3: #f3cc85;
+    --text-4: #d4b46a;
+    --text-5: #a78b52;
+
+    /* backgrounds — pine green & cozy night */
+    --bg-1: #1f2b22; /* evergreen dark */
+    --bg-2: #18221b; /* deeper pine */
+    --bg-3: #111912; /* forest shadow */
+    --bg-4: #0c120d; /* darkest */
+
+    --hover: rgba(255, 220, 140, 0.08); /* warm light hover */
+    --active: rgba(255, 220, 140, 0.15);
+    --active-2: rgba(255, 220, 140, 0.25);
+    --message-hover: var(--hover);
+
+    /* accents — holly red, pine green, golden candlelight */
+    --accent-1: #ff4b4b; /* bright ribbon red */
+    --accent-2: #d62828; /* deeper holly red */
+    --accent-3: #ffd37f; /* candle gold */
+    --accent-4: #a9d6a4; /* frosted green highlight */
+    --accent-5: #5a7f68; /* muted pine green */
+    --accent-new: #ff7b7b; /* softer red for alerts */
+
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-3), transparent 80%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-3), transparent 90%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--accent-1), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-1), transparent 95%) 40%, transparent);
+
+    /* statuses — stylized like Christmas lights */
+    --online: #5aff7b; /* pine glow */
+    --dnd: #ff4b4b; /* holly red */
+    --idle: #ffd37f; /* golden candle */
+    --streaming: #c77dff; /* violet ornament */
+    --offline: #5c605b; /* muted pine gray */
+
+    /* borders */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--accent-3);
+    --button-border: rgba(255, 255, 255, 0.1);
+
+    /* base colors — Christmas trio */
+    --red-1: #ff7b7b;
+    --red-2: #ff4b4b;
+    --red-3: #d62828;
+    --red-4: #b22222;
+    --red-5: #7a1818;
+
+    --green-1: #a9d6a4;
+    --green-2: #8ecf89;
+    --green-3: #5a7f68;
+    --green-4: #3f5d47;
+    --green-5: #2b3f31;
+
+    --blue-1: #aee1ff;
+    --blue-2: #88c9ff;
+    --blue-3: #5baaff;
+    --blue-4: #3b84cc;
+    --blue-5: #285f99;
+
+    --yellow-1: #ffd37f;
+    --yellow-2: #ffbf4b;
+    --yellow-3: #e0a93a;
+    --yellow-4: #c5902f;
+    --yellow-5: #946b21;
+
+    --purple-1: #c77dff;
+    --purple-2: #a96efc;
+    --purple-3: #8850e0;
+    --purple-4: #6b3cb8;
+    --purple-5: #502c8c;
+}

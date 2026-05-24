@@ -1,0 +1,125 @@
+/**
+ * @name system24 - Halloween Edition
+ * @description A TUI-style Discord theme in spooky Halloween colors — pumpkin, violet & night black.
+ * @author refact0r + adapted by Secrit
+ * @version 2.0.0-halloween
+ * @website https://github.com/refact0r/system24
+*/
+
+/* import base system24 */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    --font: 'DM Mono';
+    --code-font: 'DM Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(75deg, var(--accent-1), var(--accent-2), var(--accent-3));
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --small-user-panel: on;
+    --unrounding: on;
+
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+/**
+ * 🎃 system24 - Halloween Edition — Unified Pumpkin Palette by Secrit
+ */
+
+/* === Палитра === */
+:root {
+    --text: #ffd8a6;
+    --pumpkin-light: #ffb86b;
+    --pumpkin: #ff9f3f;
+    --pumpkin-deep: #ff7a1f;
+    --pumpkin-dark: #e5944f;
+    --pumpkin-shadow: #8f5a2d;
+    --background: #18141f;
+    --background-alt: #0f0c15;
+    --background-soft: #2a1d2f;
+    --accent: #ff6f00;
+    --red: #ff5555;
+    --red-light: #ff6b6b;
+    --white: #ffffff;
+    --black: #0f0c15;
+
+    /* === Цветовые уровни интерфейса === */
+    --text-1: var(--text);
+    --text-2: var(--pumpkin-light);
+    --text-3: var(--pumpkin-dark);
+
+    --bg-1: var(--background-soft);
+    --bg-2: var(--background);
+    --bg-3: var(--background-alt);
+    --bg-4: var(--black);
+
+    /* === Акценты === */
+    --accent-1: var(--pumpkin);
+    --accent-2: var(--pumpkin-deep);
+    --accent-3: var(--accent);
+    --accent-4: var(--pumpkin-shadow);
+    --accent-5: var(--red);
+
+    /* === Hover и активные состояния === */
+    --hover: rgba(255, 184, 107, 0.15);
+    --active: rgba(255, 159, 63, 0.25);
+    --active-2: rgba(255, 159, 63, 0.35);
+
+    /* === Статусы === */
+    --online: var(--pumpkin);
+    --dnd: var(--red);
+    --idle: var(--accent);
+    --streaming: var(--pumpkin-deep);
+    --offline: #6b606b;
+}
+
+/* === Основные параметры интерфейса === */
+body {
+    font-family: "DM Mono";
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+}

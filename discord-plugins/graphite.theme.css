@@ -1,0 +1,177 @@
+/**
+ * @name system24 - Graphite Black
+ * @description Monochrome graphite theme adapted for dark Arch/Hyprland setups
+ * @author refact0r + adapted by Secrit
+ * @version 2.1.0-graphite
+ * @website https://github.com/refact0r/system24
+*/
+
+/* base theme */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    --font: 'DM Mono';
+    --code-font: 'DM Mono';
+
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(
+        75deg,
+        var(--accent-1),
+        var(--accent-2),
+        var(--accent-3)
+    );
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --small-user-panel: on;
+    --unrounding: on;
+
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+/* graphite palette */
+
+:root {
+    --colors: on;
+
+    /* text */
+    --text-0: var(--bg-4);
+    --text-1: #e0e0e0;
+    --text-2: #d0d0d0;
+    --text-3: #b8b8b8;
+    --text-4: #8c8c8c;
+    --text-5: #5e5e5e;
+
+    /* darker backgrounds */
+    --bg-1: #141414;
+    --bg-2: #101010;
+    --bg-3: #0c0c0d;
+    --bg-4: #090909;
+
+    /* interactions */
+    --hover: rgba(255,255,255,0.04);
+    --active: rgba(255,255,255,0.07);
+    --active-2: rgba(255,255,255,0.10);
+    --message-hover: var(--hover);
+
+    /* accents */
+    --accent-1: #d0d0d0;
+    --accent-2: #a8a8a8;
+    --accent-3: #7a7a7a;
+    --accent-4: #4f4f4f;
+    --accent-5: #2f2f2f;
+
+    --accent-new: #e0e0e0;
+
+    /* mentions */
+    --mention: linear-gradient(
+        to right,
+        color-mix(in hsl, #d0d0d0, transparent 90%) 40%,
+        transparent
+    );
+
+    --mention-hover: linear-gradient(
+        to right,
+        color-mix(in hsl, #d0d0d0, transparent 95%) 40%,
+        transparent
+    );
+
+    --reply: linear-gradient(
+        to right,
+        color-mix(in hsl, #b8b8b8, transparent 90%) 40%,
+        transparent
+    );
+
+    --reply-hover: linear-gradient(
+        to right,
+        color-mix(in hsl, #b8b8b8, transparent 95%) 40%,
+        transparent
+    );
+
+    /* status */
+    --online: #d0d0d0;
+    --idle: #b8b8b8;
+    --dnd: #7a7a7a;
+    --streaming: #cfcfcf;
+    --offline: #3a3a3a;
+
+    /* borders */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: #d0d0d0;
+    --button-border: rgba(255,255,255,0.07);
+
+    /* neutral families */
+
+    --red-1: #b8b8b8;
+    --red-2: #9c9c9c;
+    --red-3: #7c7c7c;
+    --red-4: #585858;
+    --red-5: #383838;
+
+    --green-1: #d0d0d0;
+    --green-2: #b0b0b0;
+    --green-3: #8c8c8c;
+    --green-4: #666666;
+    --green-5: #404040;
+
+    --blue-1: #d0d0d0;
+    --blue-2: #b0b0b0;
+    --blue-3: #8c8c8c;
+    --blue-4: #666666;
+    --blue-5: #404040;
+
+    --yellow-1: #d0d0d0;
+    --yellow-2: #b0b0b0;
+    --yellow-3: #8c8c8c;
+    --yellow-4: #666666;
+    --yellow-5: #404040;
+
+    --purple-1: #d0d0d0;
+    --purple-2: #b0b0b0;
+    --purple-3: #8c8c8c;
+    --purple-4: #666666;
+    --purple-5: #404040;
+}

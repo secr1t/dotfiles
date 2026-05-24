@@ -1,0 +1,82 @@
+configuration {
+    font: "sans 16";
+    show-icons: true;
+    display-drun: "Search";
+    drun-display-format: "{name}";
+}
+
+* {
+    bg:         #0e0e0f;
+    bg-alt:     #1a1a1a;
+    bg-select:  #3a3a3a;
+
+    fg:         #e6e6e6;
+    fg-dim:     #8a8a8a;
+
+    border:     #4a4a4a;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    fullscreen: false;
+    width:      55%;
+    height:     55%;
+    location:   center;
+    anchor:     center;
+    background-color: @bg;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, listview ];
+    spacing:          10px;
+    padding:          20px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border:           0 0 2px 0;
+    border-color:     @border;
+    padding:          10px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @fg-dim;
+}
+
+listview {
+    background-color: transparent;
+    columns:          5;
+    lines:            5;
+    spacing:          6px;
+    scrollbar:        false;
+    layout:           vertical;
+}
+
+element {
+    background-color: transparent;
+    padding:          6px;
+    spacing:          4px;
+    border-radius:    6px;
+    orientation:      vertical;
+    children:         [ element-icon, element-text ];
+}
+
+element selected {
+    background-color: @bg-select;
+    text-color:       #ffffff;
+}
+
+element-icon {
+    size:             32px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    font:             "sans 12";
+    horizontal-align: 0.5;
+}

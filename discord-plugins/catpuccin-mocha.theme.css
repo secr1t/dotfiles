@@ -1,0 +1,150 @@
+/**
+ * @name system24 - Catppuccin Mocha Deep Lavender
+ * @description A TUI-style Discord theme using Catppuccin Mocha with deep lavender & purple emphasis.
+ * @author refact0r + adapted by Secrit
+ * @version 2.0.0-mocha-deeplavender
+ * @website https://github.com/refact0r/system24
+*/
+
+/* import base system24 theme */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    --font: 'DM Mono';
+    --code-font: 'DM Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(75deg, var(--accent-1), var(--accent-2), var(--accent-3));
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --small-user-panel: on;
+    --unrounding: on;
+
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+/* Catppuccin Mocha – Deep Lavender */
+:root {
+    --colors: on;
+
+    /* text colors */
+    --text-0: var(--bg-4);
+    --text-1: #cdd6f4; /* bright white text */
+    --text-2: #b4befe; /* lavender headline text */
+    --text-3: #a6adc8;
+    --text-4: #9399b2;
+    --text-5: #7f849c;
+
+    /* backgrounds (mocha) */
+    --bg-1: #313244;
+    --bg-2: #1e1e2e;
+    --bg-3: #181825;
+    --bg-4: #11111b;
+
+    /* interactions */
+    --hover: rgba(180, 190, 254, 0.10);
+    --active: rgba(180, 190, 254, 0.20);
+    --active-2: rgba(180, 190, 254, 0.30);
+    --message-hover: var(--hover);
+
+    /* purple/lavender focused accents */
+    --accent-1: #b4befe; /* lavender */
+    --accent-2: #cba6f7; /* mauve */
+    --accent-3: #a6adc8; /* desaturated lavender-gray */
+    --accent-4: #988ba2; /* muted violet */
+    --accent-5: #6c7086; /* deep steel violet */
+    --accent-new: #f38ba8; /* red (warnings) */
+
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-1), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-1), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
+
+    /* status indicators (toned to violet spectrum) */
+    --online: #cba6f7; /* lavender glow */
+    --dnd: #f38ba8; /* red-pink */
+    --idle: #f2cdcd; /* soft pinkish lavender */
+    --streaming: #b4befe; /* lavender-blue */
+    --offline: #6c7086; /* muted gray */
+
+    /* borders */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--accent-1);
+    --button-border: rgba(255, 255, 255, 0.1);
+
+    /* base color families (converted to purple range) */
+    --red-1: #f38ba8;
+    --red-2: #e64553;
+    --red-3: #d20f39;
+    --red-4: #c92a2a;
+    --red-5: #a4161a;
+
+    /* green family replaced with violets */
+    --green-1: #b4befe;
+    --green-2: #cba6f7;
+    --green-3: #a6adc8;
+    --green-4: #988ba2;
+    --green-5: #6c7086;
+
+    /* blue family slightly tinted toward purple */
+    --blue-1: #b4befe;
+    --blue-2: #a6adc8;
+    --blue-3: #9399b2;
+    --blue-4: #7f849c;
+    --blue-5: #6c7086;
+
+    /* yellow family muted into warm lilac */
+    --yellow-1: #f2cdcd;
+    --yellow-2: #f5c2e7;
+    --yellow-3: #e8a2af;
+    --yellow-4: #dba0d0;
+    --yellow-5: #cba6f7;
+
+    /* purple family central to theme */
+    --purple-1: #b4befe;
+    --purple-2: #cba6f7;
+    --purple-3: #a6adc8;
+    --purple-4: #988ba2;
+    --purple-5: #6c7086;
+}
