@@ -3,7 +3,7 @@
 
 # Но разрешаем сам gitignore
 !.gitignore
-
+!README.md
 # Разрешённые директории конфигов
 !fastfetch/
 !fish/
@@ -14,7 +14,6 @@
 !rofi/
 !waybar/
 !yazi/
-
 # Разрешаем файлы внутри этих директорий
 !fastfetch/**
 !fish/**
