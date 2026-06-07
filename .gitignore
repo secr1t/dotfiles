@@ -1,0 +1,27 @@
+# Игнорируем ВСЁ
+*
+
+# Но разрешаем сам gitignore
+!.gitignore
+
+# Разрешённые директории конфигов
+!fastfetch/
+!fish/
+!hypr/
+!kitty/
+!nvim/
+!qutebrowser/
+!rofi/
+!waybar/
+!yazi/
+
+# Разрешаем файлы внутри этих директорий
+!fastfetch/**
+!fish/**
+!hypr/**
+!kitty/**
+!nvim/**
+!qutebrowser/**
+!rofi/**
+!waybar/**
+!yazi/**

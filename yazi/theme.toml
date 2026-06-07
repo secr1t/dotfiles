@@ -1,0 +1,153 @@
+confirm-quit=true
+
+[mgr]
+cwd = { fg = "#dcdcdc" }
+
+hovered = { reversed = true }
+preview_hovered = { reversed = true }
+
+marker_copied = { fg = "#8a8a8a", bg = "#8a8a8a" }
+marker_cut = { fg = "#8a8a8a", bg = "#8a8a8a" }
+marker_marked = { fg = "#4a4a4a", bg = "#4a4a4a" }
+marker_selected = { fg = "#3a3a3a", bg = "#3a3a3a" }
+
+find_keyword = { fg = "#dcdcdc", bg = "#3a3a3a" }
+find_position = {}
+
+count_copied = { fg = "#dcdcdc", bg = "#8a8a8a" }
+count_cut = { fg = "#dcdcdc", bg = "#8a8a8a" }
+count_selected = { fg = "#dcdcdc", bg = "#4a4a4a" }
+
+border_symbol = "│"
+border_style = { fg = "#4a4a4a" }
+
+[tabs]
+active = { fg = "#dcdcdc", bg = "#1a1a1a" }
+inactive = { fg = "#8a8a8a", bg = "#1a1a1a" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#dcdcdc", bg = "#1a1a1a" }
+normal_alt = { fg = "#8a8a8a", bg = "#1a1a1a" }
+
+select_main = { fg = "#dcdcdc", bg = "#3a3a3a" }
+select_alt = { fg = "#8a8a8a", bg = "#1a1a1a" }
+
+unset_main = { fg = "#dcdcdc", bg = "#4a4a4a" }
+unset_alt = { fg = "#8a8a8a", bg = "#1a1a1a" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+overall = { fg = "#dcdcdc", bg = "#1a1a1a" }
+
+progress_label = { fg = "#dcdcdc", bg = "#3a3a3a", bold = true }
+progress_normal = { fg = "#dcdcdc", bg = "#3a3a3a" }
+progress_error = { fg = "#dcdcdc", bg = "#3a3a3a" }
+
+perm_type = { fg = "#dcdcdc" }
+perm_read = { fg = "#dcdcdc" }
+perm_write = { fg = "#dcdcdc" }
+perm_exec = { fg = "#dcdcdc" }
+perm_sep = { fg = "#4a4a4a" }
+
+[which]
+cols = 2
+separator = " - "
+
+separator_style = { fg = "#4a4a4a" }
+
+mask = { bg = "#1a1a1a" }
+
+rest = { fg = "#dcdcdc" }
+cand = { fg = "#dcdcdc" }
+desc = { fg = "#dcdcdc" }
+
+[pick]
+border = { fg = "#4a4a4a" }
+
+active = { fg = "#dcdcdc", bold = true }
+inactive = {}
+
+[input]
+border = { fg = "#4a4a4a" }
+
+title = {}
+value = {}
+
+selected = { reversed = true }
+
+[cmp]
+border = { fg = "#4a4a4a" }
+
+active = { reversed = true }
+inactive = {}
+
+[tasks]
+border = { fg = "#4a4a4a" }
+
+title = {}
+hovered = { fg = "#dcdcdc" }
+
+[help]
+on = { fg = "#dcdcdc" }
+run = { fg = "#dcdcdc" }
+
+desc = {}
+
+hovered = { reversed = true, bold = true }
+
+footer = { fg = "#dcdcdc", bg = "#4a4a4a" }
+
+[notify]
+title_info = { fg = "#dcdcdc" }
+title_warn = { fg = "#dcdcdc" }
+title_error = { fg = "#dcdcdc" }
+
+[filetype]
+rules = [
+
+    # директории
+    { url = "*/", fg = "#bfbfbf" },
+
+    # исполняемые
+    { url = "*", is = "exec", fg = "#dcdcdc" },
+
+    # сломанные ссылки
+    { url = "*", is = "orphan", fg = "#dcdcdc" },
+
+    # все остальные файлы
+    { url = "*", fg = "#dcdcdc" },
+]
+
+[icon]
+
+dirs = [
+    { name = ".config", text = "", fg = "#8a8a8a" },
+    { name = ".git", text = "", fg = "#8a8a8a" },
+    { name = "Desktop", text = "", fg = "#8a8a8a" },
+    { name = "Documents", text = "", fg = "#8a8a8a" },
+    { name = "Downloads", text = "", fg = "#8a8a8a" },
+    { name = "Music", text = "", fg = "#8a8a8a" },
+    { name = "Pictures", text = "", fg = "#8a8a8a" },
+    { name = "Videos", text = "", fg = "#8a8a8a" },
+]
+
+conds = [
+
+    { if = "orphan", text = "", fg = "#dcdcdc" },
+    { if = "link", text = "", fg = "#8a8a8a" },
+
+    { if = "block", text = "", fg = "#dcdcdc" },
+    { if = "char", text = "", fg = "#dcdcdc" },
+    { if = "fifo", text = "", fg = "#dcdcdc" },
+    { if = "sock", text = "", fg = "#dcdcdc" },
+
+    { if = "dir", text = "", fg = "#bfbfbf" },
+    { if = "exec", text = "", fg = "#dcdcdc" },
+
+    { if = "!dir", text = "", fg = "#8a8a8a" },
+]
