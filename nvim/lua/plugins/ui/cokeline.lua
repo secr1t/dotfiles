@@ -1,31 +1,32 @@
 return {
   "willothy/nvim-cokeline",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  event = "BufEnter",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+  },
   config = function()
-    local ok, cokeline = pcall(require, "cokeline")
-    if not ok then return end
+    local cokeline = require("cokeline")
 
     cokeline.setup({
       default_hl = {
         fg = function(buffer)
-          return buffer.is_focused and "#ffffff" or "#888888"
+          return buffer.is_focused and "#ffffff" or "#a0a0a0"
         end,
-        bg = "#1e1e1e",
-      },
-
-      buffers = {
-        new_buffers_position = "next",
-      },
-
-      rendering = {
-        max_buffer_width = 25,
+        bg = function(buffer)
+          return buffer.is_focused and "#3a3a4a" or "#1e1e2e"
+        end,
       },
 
       components = {
         {
           text = function(buffer)
-            return " " .. buffer.devicon.icon
+            return buffer.index .. " "
+          end,
+          fg = "#7aa2f7",
+        },
+        {
+          text = function(buffer)
+            return buffer.devicon.icon .. " "
           end,
           fg = function(buffer)
             return buffer.devicon.color
@@ -33,12 +34,33 @@ return {
         },
         {
           text = function(buffer)
-            return " " .. buffer.filename .. " "
+            return buffer.filename .. " "
           end,
         },
         {
-          text = "󰅖",
-          delete_buffer_on_left_click = true,
+          text = "",
+          fg = "#ff5555",
+          on_click = function(_, _, _, _, buffer)
+            vim.api.nvim_buf_delete(buffer.id, { force = true })
+          end,
+        },
+      },
+
+      -- Новый способ фильтрации (актуальный)
+      buffers = {
+        filter_valid = function(buffer)
+          return buffer.type ~= "terminal"
+        end,
+      },
+
+      sidebar = {
+        filetype = { "neo-tree", "alpha" },
+        components = {
+          {
+            text = "   Neo-tree   ",
+            fg = "#7aa2f7",
+            bg = "#1e1e2e",
+          },
         },
       },
     })

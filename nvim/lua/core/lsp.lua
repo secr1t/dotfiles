@@ -6,6 +6,10 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "pyright",
     "ts_ls",
+    "html",          -- ← добавь
+    "cssls",         -- ← добавь
+    "emmet_ls",      -- ← очень рекомендую
+    -- "tailwindcss", -- если используешь Tailwind
   },
 })
 
@@ -46,9 +50,41 @@ vim.lsp.config("ts_ls", {
   on_attach = on_attach,
 })
 
+-- HTML
+vim.lsp.config("html", {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    html = {
+      format = { enable = true },
+    },
+  },
+})
+
+-- CSS
+vim.lsp.config("cssls", {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    css = { validate = true },
+    scss = { validate = true },
+    less = { validate = true },
+  },
+})
+
+-- Emmet (очень удобные сниппеты)
+vim.lsp.config("emmet_ls", {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
+})
+
 -- ENABLE SERVERS
 vim.lsp.enable({
   "lua_ls",
   "pyright",
   "ts_ls",
+  "html",
+  "cssls",
+  "emmet_ls",
 })

@@ -1,3 +1,11 @@
 [opener]
 edit = [{ run = 'nvim "$@"', desc = "nvim", block = true }]
 
+
+[manager]
+# Шрифт
+ratio = 7
+show_hidden = true
+
+[preview]
+# Если хочешь, чтобы иконки отображались красиво
